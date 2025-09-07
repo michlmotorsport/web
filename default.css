@@ -24,24 +24,24 @@
   }
   .bottom {
     float:center;
-    
     text-align:center;
-    padding:0 0 10 10;margin-top:7px;font-size:12px;">
+    padding:0 0 10 10;
+    margin-top:7px;
+    font-size:12px;
   }
   .card {
     transition: transform 0.3s ease-in-out;
     text-align: center;
+    border-radius: 30px;
   }
   .card:hover {
-    background-color: #5486ac;
-    font-size: large;
+    background-color: #5fb359;
     transform: scale(1.05);
   }
-
   .secondary {
-    float: left;
+    float: center;
     width: 100%;
-    
+
     overflow: hidden;
     color:#ddd;
     background-color: #333;
@@ -63,21 +63,32 @@
   
   .navimage {
     max-height: 1rem;
-    float:center;
-    text-align: center;
+    max-width: 20rem;
+    margin-top:14px;
+    padding-left: 4rem;
+    padding-right: 1rem;
+    float:left;
+  }
+  .menubutton {
+    position:fixed;
+    right:20px;
+    max-height: 2.5rem;
+  }
+  h4 {
+    padding: 1rem;
   }
 
   @media only screen and (max-width:800px) {
     /* For tablets: */
     .main {
-      width: 80%;
+      width: 100%;
       padding: 0;
     }
     .right {
       width: 100%;
     }
     .secondary {
-      width: 80%;
+      width: 100%;
       padding: 0;
     }
   }
@@ -96,52 +107,23 @@
     color:#d6b5d6
   }
 
-/* ham menu */
-.ham-menu {
-    height: 50px;
-    width: 40px;
-    margin-left: auto;
-    position: relative;
-}
-.ham-menu span {
-    height: 5px;
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 25px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
-}
-.ham-menu span:nth-child(1) {
-    top: 25%;
-}
-.ham-menu span:nth-child(3) {
-    top: 75%;
-}
-.ham-menu.active span {
-    background-color: white;
-}
-.ham-menu.active span:nth-child(1) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-.ham-menu.active span:nth-child(2) {
-    opacity: 0;
-}
-.ham-menu.active span:nth-child(3) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
 
 /* ----------------------------------------- */
 
 .card {
-  background-color: dodgerblue;
+  background-color: #58ac54;
   color: white;
   padding: 1rem;
-  height: 4rem;
+  height: 4.5rem;
+  font-size:1.3rem;
+}
+
+.card.a  {
+  text-decoration: none;
+}
+
+.card.visited  {
+  text-decoration: none;
 }
 
 .cards {
@@ -163,7 +145,10 @@
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #333333b5;
+  position:fixed;
+  width:100%;
+  height: 3rem;
 }
 
 .topnav a {
@@ -174,17 +159,16 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  transition: transform 0.3s ease-in-out;
+  
+  border-radius: 30px;
+  transition: transform 0.1s ease-in-out;
 }
 
-.menubutton {
-  scale:10%;
-}
 
 .topnav a:hover {
   background-color: #ddd;
   color: black;
-  transform: scale(1.2)
+  transform: scale(1.01)
 }
 
 .topnav a.active {
@@ -200,13 +184,14 @@
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
-    display:inline;
+    display:block;
   }
 }
 
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
+    max-width: 3px;
     position: absolute;
     right: 0;
     top: 0;
@@ -216,6 +201,47 @@
     display: block;
     text-align: left;
   }
+}
+
+.banner-container {
+  position: relative;
+  text-align: center;
+  z-index: -1;
+}
+
+.centered {
+  position: absolute;
+  color:#eeeeee;
+  text-shadow: 0 0 15px black;
+  font-size:150%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered2 {
+  position: absolute;
+  color:#eeeeee;
+  font-size:1.5rem;
+  text-shadow: 0 0 15px black;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rounded-icon {
+  float:left;
+}
+
+.rounded-list {
+  
+  text-align: center;
+  margin: auto auto 1rem;
+  width: 50%;
+  height: auto;
+  max-height: 20%;
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: #f1f1f1;
 }
 
 #statusBorder {
@@ -257,44 +283,3 @@
     }
   }
 
-
-
-  ul.contact
-	{
-    display:block;
-		margin: 0;
-		padding: 1.5em 0em 2.5em 0em;
-		list-style: none;
-	}
-	
-	ul.contact li
-	{
-		display: inline-block;
-		padding: 0em 0.30em;
-		font-size: 1em;
-	}
-	
-	ul.contact li span
-	{
-		display: none;
-		margin: 0;
-		padding: 0;
-	}
-	
-	ul.contact li a
-	{
-		color: #FFF;
-	}
-	
-	ul.contact li a:before
-	{
-		display: inline-block;
-		background: #3f3f3f;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 20px;
-		text-align: center;
-		color: #FFFFFF;
-	}
-	

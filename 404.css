@@ -1,0 +1,25 @@
+body {
+    background-color: #333;
+    font-family:Verdana;
+    color:aliceblue;
+    text-align: center;
+}
+
+.navimage {
+    padding-top: 3rem;
+    max-height: 3rem;
+    float:center;
+    text-align: center;
+}
+
+a {
+    background-color: #58ac54;
+    padding:1rem;
+    font-size: 1rem;
+    color:azure;
+    transition: transform 0.3s ease-in-out;
+}
+
+a.hover {
+    transform: scale(1.2);
+}
