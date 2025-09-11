@@ -24,21 +24,10 @@
     overflow: hidden;
   }
   .bottom {
-
     text-align:center;
     padding:0 0 10 10;
     margin-top:7px;
     font-size:12px;
-  }
-  .card {
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-    border-radius: 30px;
-
-  }
-  .card:hover {
-    background-color: #5fb359;
-    transform:scaleX(1.03);
   }
 
   #vino {
@@ -95,7 +84,6 @@
     }
     .secondary {
       width: 100%;
-      padding: 0;
     }
   }
   @media only screen and (max-width:500px) {
@@ -122,7 +110,39 @@
   padding: 1rem;
   height: 4.5rem;
   font-size:1.3rem;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  border-radius: 30px;
 }
+
+.card:hover {
+  background-color: #5fb359;
+  transform:scaleX(1.03);
+}
+
+.racingcards {
+  max-width: 90%;
+  max-height: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 0.5rem;
+}
+
+.racingcard img {
+  width:20%;
+  
+}
+
+.racingcard {
+  background-color: #58ac54;
+  color: white;
+  padding: 1rem;
+  height: 4.5rem;
+  font-size:1.3rem;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  border-radius: 30px;
+  }
 
 .card.a  {
   text-decoration: none;
@@ -130,6 +150,42 @@
 
 .card.visited  {
   text-decoration: none;
+}
+
+#nodec:link {
+  color:#000000;
+  text-decoration: none;
+  text-decoration-color: #000000;
+  -moz-text-decoration-color: #000000; 
+}
+#nodec:visited {
+  color:#000000;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  
+}.gallery-item {
+  margin: 5px;
+  border: 2px solid #58ac54;
+  width: 180px;
+  border-radius: 30px;
+  transition: 0.2s ease-in-out;
+  
+}.gallery-item:hover {
+  margin: 1px;
+  border: 5px solid #58ac54;
+  
+}.gallery-item img {
+  width: 100%; max-height: 150px; object-fit: cover;
+  border-radius: 30px;
+}
+
+.name {
+  padding: 15px;
+  text-align: center;
 }
 
 .cards {
@@ -142,11 +198,13 @@
 /* Screen larger than 600px? 2 column */
 @media (min-width: 600px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
+  .racingcards { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* Screen larger than 900px? 3 columns */
 @media (min-width: 900px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
+  .racingcards { grid-template-columns: repeat(6, 1fr); }
 }
 
 .topnav {
@@ -154,7 +212,11 @@
   background-color: #333333b5;
   position:fixed;
   width:100%;
-  
+  transition: 0.3s ease-in-out; 
+}
+
+.topnav:hover {
+  background-color: #333333e1;
 }
 
 .topnav a {
@@ -186,7 +248,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 900px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -242,7 +304,7 @@
   margin: auto auto 1rem;
   max-width: 80%;
   height: auto;
-  max-height: 20%;
+  
   border-radius: 30px;
   padding: 1rem;
   background-color: #f1f1f1;
