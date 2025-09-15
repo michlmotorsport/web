@@ -65,7 +65,7 @@
   .menubutton {
     position:fixed;
     right:20px;
-    top:0;
+    top:1.5%;
     max-height: 2rem;
   }
 
@@ -258,6 +258,13 @@
 @media screen and (max-width: 900px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
+    width: 3rem;
+    float: right;
+    display: block;
+  }
+  .topnav a.icon:hover {
+    background-color: #54545476;
+    width: 3rem;
     float: right;
     display: block;
   }
@@ -266,6 +273,7 @@
 @media screen and (max-width: 900px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
+    
     max-width: 3px;
     position: absolute;
 
