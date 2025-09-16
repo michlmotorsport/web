@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family:Verdana;
+    font-family: Verdana;
     scroll-behavior: smooth;
   }
 
@@ -38,13 +38,8 @@
     overflow: hidden;
     color:#ddd;
     background-color: #333;
-<<<<<<< Updated upstream
     
     padding: 20px;
-=======
-    padding:20px;
-    
->>>>>>> Stashed changes
   }
 .secondary-child {
     width: 50%;
