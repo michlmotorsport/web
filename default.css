@@ -128,13 +128,10 @@
   color:#ffffff;
 }
 
-
 .card:hover {
   background-color: #5fb359;
   transform:scaleX(1.03);
 }
-
-
 
 .card.a  {
   text-decoration: none;
@@ -331,7 +328,7 @@
   animation: bgColor 5s infinite linear;
   color: rgb(255, 255, 255);
   border-radius: 12px;
-  
+
 }
 
 #status {
