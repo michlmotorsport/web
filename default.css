@@ -112,7 +112,7 @@
   transition: transform 0.3s ease-in-out;
   text-align: center;
   border-radius: 15px;
-  
+  box-shadow: inset 0 0 0 1px #468943;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +130,7 @@
 
 .card:hover {
   background-color: #5fb359;
-  transform:scaleX(1.03);
+  box-shadow: inset 0 0 0 5px #468943;
 }
 
 .card.a  {
@@ -229,16 +229,18 @@
 .topnav a:hover {
   background-color: #ddd;
   color: black;
-  
+  box-shadow: inset 0 0 0 2px #58ac54;
 }
 
 .topnav a.active {
   background-color: #58ac54;
+  box-shadow: inset 0 0 0 1px white;
   color: white;
 }
 .topnav a.active:hover {
   background-color: #488a44;
   color: white;
+  box-shadow: inset 0 0 0 2px white;
 }
 
 .topnav .icon {
