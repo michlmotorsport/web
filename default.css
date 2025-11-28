@@ -154,19 +154,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
-  
-}.gallery-item {
+}
+
+.gallery-item {
   margin: 5px;
-  border: 2px solid #58ac54;
+  box-shadow: inset 0 0 0 3px #58ac54;
   width: 180px;
   border-radius: 30px;
-  transition: 0.2s ease-in-out;
-  
-}.gallery-item:hover {
-  border-radius: 35px;
-  margin: 1px;
+}
+
+.gallery-item img {
+  border: 3px solid #58ac54;
+  border-radius: 30px;
+}
+.gallery-item img:hover {
   border: 5px solid #58ac54;
+  border-radius: 30px;
+}
+
+.gallery-item:hover {
+  border-radius: 30px;
+  
+  box-shadow: inset 0 0 0 5px #58ac54;
   
 }
 
