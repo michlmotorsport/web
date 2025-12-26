@@ -85,11 +85,18 @@
     .secondary {
       width: 100%;
     }
+    .logo {
+      width: 100px;
+    }
   }
   @media only screen and (max-width:500px) {
     /* For mobile phones: */
     .menu, .main, .right, .secondary {
       width: 100%;
+    }
+
+    .logo {
+      width: 10rem;
     }
   }
 
@@ -298,6 +305,21 @@
   position: relative;
   text-align: center;
   z-index: -1;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%; 
+  max-height: 300px; 
+  object-fit: cover;
+}
+
+.logo {
+  position: absolute;
+  width: 25%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .centered {
