@@ -266,6 +266,7 @@
 @media screen and (max-width: 900px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
+    
     width: 3rem;
     float: right;
     display: block;
@@ -358,21 +359,24 @@
 
 #statusBorder {
   background-color: #f8ce4b;
+  width:31rem;
   animation: bgColor 5s infinite linear;
   color: rgb(255, 255, 255);
   border-radius: 12px;
-
 }
 
 #status {
   background-color: #eeeeee;
-  margin:10%;
+  margin-left: 20%;
+  margin-right: 20%;
   text-align: center;
   font-size: 125%;
   color: rgb(5, 5, 5);
   border-radius: 12px;
   transition:0.3s;
 }
+
+
 #status:hover {
   scale: 101%;
 }
